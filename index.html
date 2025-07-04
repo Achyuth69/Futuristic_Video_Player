@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Futuristic Video Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Futuristic Video Player</h1>
+
+    <div class="video-input">
+      <input type="text" id="videoUrl" placeholder="Enter MP4, YouTube or Vimeo URL" />
+      <button id="loadVideo">Load Video</button>
+    </div>
+
+    <div class="video-container">
+      <div id="videoWrapper">
+        <video id="video" class="video" controls preload="metadata">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+          <track label="English" kind="subtitles" srclang="en" src="captions.vtt" default />
+        </video>
+      </div>
+
+      <div class="progress-preview" id="previewBox">
+        <img id="previewImg" src="" alt="Preview">
+      </div>
+    </div>
+
+    <div class="controls" id="customControls">
+      <button id="playPause">▶</button>
+      <button data-skip="-10">« 10s</button>
+      <button data-skip="10">10s »</button>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="1">
+      <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
+      <button id="fullscreenBtn">⛶</button>
+      <button id="themeBtn">🌓</button>
+      <button id="bookmarkBtn">🔖 Bookmark</button>
+      <button id="voiceBtn">🎤 Voice</button>
+      <button id="translateBtn">🌐 Translate Subtitles</button>
+    </div>
+
+    <div id="bookmarksList"></div>
+    <div id="chaptersList"></div>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
